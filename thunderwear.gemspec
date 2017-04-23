@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ben Ricker"]
   spec.email         = ["BGRicker@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This gem will give you a couple quick weather forecasts based on your zip code}
+  spec.description   = %q{Given your zip code and a darkskies API key, you'll be able to get some short term weather info bout your zip code.}
+  spec.homepage      = "https://github.com/BGRicker/thunderwear"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -26,10 +26,13 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir        = "bin"
+  spec.executables   = ["thunderwear"]#spec.files.grep(%r{^/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "forecast_io"
+  spec.add_development_dependency "socker"
+  spec.add_development_dependency "geocoder"
 end

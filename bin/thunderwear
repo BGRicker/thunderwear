@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'thunderwear'
+require "forecast_io"
+require "socket"
+require "geocoder"
+
+weatherer = Thunderwear::GetWeather.new("01982") 
+weatherer.weather_me  
