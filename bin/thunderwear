@@ -1,10 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'thunderwear'
-require "forecast_io"
-require "socket"
-require "geocoder"
-require 'colorize'
 
 weatherer = Thunderwear::GetWeather.new("01982") 
 weatherer.weather_me  
