@@ -2,12 +2,12 @@
 
 require 'thunderwear'
 
-if File.exist?('.thunderwear_zip')
-  zip = File.read('.thunderwear_zip')
+if File.exist?("#{Dir.home}/.thunderwear_zip")
+  zip = File.read("#{Dir.home}/.thunderwear_zip")
 else
   puts "what's your zip code?"
   zip = gets.chomp
-  zip_file = File.open(".thunderwear_zip","w")
+  zip_file = File.open("#{Dir.home}/.thunderwear_zip", "w")
   zip_file.write zip
   zip_file.close
 end
