@@ -2,5 +2,15 @@
 
 require 'thunderwear'
 
-weatherer = Thunderwear::GetWeather.new("01982") 
+if File.exist?('.thunderwear_zip')
+  zip = File.read('.thunderwear_zip')
+else
+  puts "what's your zip code?"
+  zip = gets.chomp
+  zip_file = File.open(".thunderwear_zip","w")
+  zip_file.write zip
+  zip_file.close
+end
+
+weatherer = Thunderwear::GetWeather.new(zip) 
 weatherer.weather_me  

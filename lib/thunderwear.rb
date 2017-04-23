@@ -17,6 +17,10 @@ module Thunderwear
       Geocoder.coordinates(@zip)
     end
 
+    def town
+      Geocoder.address(@zip)
+    end
+
     def local_weather
       lat = zippocoder.first
       long = zippocoder.last
@@ -37,6 +41,7 @@ module Thunderwear
 
     def weather_me
       puts stars
+      puts "Weather for #{town}".colorize(:blue)
       puts "\n\t - current temperature: ".colorize(:blue) + "#{currently.to_s.colorize(:green)}"
       puts "\t - today's summary:".colorize(:blue) + " #{today.colorize(:green)}\n\n"
       puts stars
