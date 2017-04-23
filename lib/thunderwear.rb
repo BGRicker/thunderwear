@@ -23,16 +23,23 @@ module Thunderwear
     end
 
     def currently
-      "\n\t - currently: #{local_weather.currently.apparentTemperature}"
+      local_weather.currently.apparentTemperature
     end
 
     def today
-      "\t - summary: #{local_weather.daily.summary}\n\n"
+      local_weather.daily.summary
+    end
+
+    def stars
+      star_count = today.length
+      "*" * star_count + "*" * 28
     end
 
     def weather_me
-      puts currently
-      puts today
+      puts stars
+      puts "\n\t - current temperature: #{currently}"
+      puts "\t - today's summary: #{today}\n\n"
+      puts stars
     end
   end
 end
