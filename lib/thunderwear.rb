@@ -31,8 +31,8 @@ module Thunderwear
     end
 
     def stars
-      star_count = today.length
-      "*" * star_count + "*" * 28
+      star_count = today.length + 28
+      "*" * star_count
     end
 
     def weather_me
