@@ -17,10 +17,10 @@ Run the gem:
     $ thunderwear
 
 If this is your first time running the gem, you'll be prompted to enter your zip
-code. This is saved to .thunderwear_zip. If you want to change your zip, delete
+code. This is saved to ~/.thunderwear_zip. If you want to change your zip, delete
 .thunderwear_zip
 
-    $ rm .thunderwear_zip
+    $ rm ~/.thunderwear_zip
 
 ## Contributing
 
