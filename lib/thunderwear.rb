@@ -2,6 +2,7 @@ require "thunderwear/version"
 require "forecast_io"
 require "socket"
 require "geocoder"
+require 'colorize'
 
 module Thunderwear
   class GetWeather
@@ -31,14 +32,13 @@ module Thunderwear
     end
 
     def stars
-      star_count = today.length + 28
-      "*" * star_count
+      "*" * (today.length + 28)
     end
 
     def weather_me
       puts stars
-      puts "\n\t - current temperature: #{currently}"
-      puts "\t - today's summary: #{today}\n\n"
+      puts "\n\t - current temperature: ".colorize(:blue) + "#{currently.to_s.colorize(:green)}"
+      puts "\t - today's summary:".colorize(:blue) + " #{today.colorize(:green)}\n\n"
       puts stars
     end
   end

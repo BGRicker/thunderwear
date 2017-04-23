@@ -35,4 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "forecast_io"
   spec.add_development_dependency "socker"
   spec.add_development_dependency "geocoder"
+  spec.add_development_dependency "colorize"
 end
