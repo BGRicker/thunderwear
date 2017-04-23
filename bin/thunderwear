@@ -12,9 +12,10 @@ if ARGV.empty?
     zip_file.write zip
     zip_file.close
   end
-  weatherer = Thunderwear::GetWeather.new(zip) 
+  weatherer = Thunderwear::GetWeather.new("01982") 
   weatherer.weather_me  
-else ARGV.first.capitalize == "Alexa"
+else 
+  ARGV.first.to_s.capitalize == "Alexa"
   puts "😎  🌞  " * 8
   %x( say 'Alexa, whats the weather today?' ) 
 end

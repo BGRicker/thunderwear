@@ -11,6 +11,7 @@ module Thunderwear
     end
 
     ForecastIO.api_key = 'dcbdb3b43d97ccfc1eb6379f3b97c9b0'
+    Geocoder.configure(:timeout => 500)
 
     def zippocoder
       Geocoder.coordinates(@zip)
