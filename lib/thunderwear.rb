@@ -1,6 +1,5 @@
 require "thunderwear/version"
 require "forecast_io"
-require "socket"
 require "geocoder"
 require 'colorize'
 

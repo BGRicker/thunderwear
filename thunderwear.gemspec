@@ -21,10 +21,9 @@ Gem::Specification.new do |spec|
   spec.executables   = ["thunderwear"]#spec.files.grep(%r{^/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.14"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "forecast_io", "~> 0"
-  spec.add_development_dependency "socker", "~> 0"
-  spec.add_development_dependency "geocoder", "~> 0"
-  spec.add_development_dependency "colorize", "~> 0"
+  spec.add_dependency "bundler", "~> 1.14"
+  spec.add_dependency "rake", "~> 10.0"
+  spec.add_dependency "forecast_io", "~> 2.0"
+  spec.add_dependency "geocoder", "~> 1.4"
+  spec.add_dependency "colorize", "~> 0.7"
 end
